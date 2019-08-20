@@ -7,4 +7,4 @@ still present in the code, it just hasn't been completely implemented at this ti
 please feel free to do so.
 
  Leaflet and D3 map of global carbon emissions, GDP, population growth and population density.
-https://sfairchild3.github.io/CO2-Emissions-Map/
+https://lostabroad.github.io/Emission-CO2/
