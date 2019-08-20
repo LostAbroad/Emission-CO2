@@ -48,6 +48,7 @@ nav {
 	background-color: #ff5722;
 }
 
+/*
 #chart {
 	background-color: #fff;
 	height: 400px;
@@ -61,6 +62,7 @@ nav {
 	width: 48%;
 	box-shadow: 0 0 5px 2px #282a2d;
 }
+*/
 
 #dropdown,
 #filter {
@@ -94,7 +96,7 @@ nav {
 
 
 .tableFixHead thead th {
-	position: sticky;
+	position: fixed;
 	top: 0;
 }
 
