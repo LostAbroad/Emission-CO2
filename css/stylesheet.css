@@ -96,7 +96,7 @@ nav {
 
 
 .tableFixHead thead th {
-	position: fixed;
+	position: sticky;
 	top: 0;
 }
 
@@ -104,6 +104,8 @@ nav {
 	background-color: #ffffff;
 	height: 345px;
     box-shadow: 0 0 5px 2px #282a2d;
+    position: sticky;
+    
 }
 
 
