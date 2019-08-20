@@ -1,0 +1,200 @@
+body {
+	background-color: #F8F8FF;
+}
+
+.container-fluid {
+	max-width: 1500px;
+	background-color: #D3D3D3;
+}
+
+
+.leaflet-container {
+	padding: 0px;
+}
+
+.col {
+	height: 400px;
+	width: 48%;
+	margin: 15px;
+}
+
+
+.lead {
+	color: white;
+}
+
+#map {
+	padding-left: 15px;
+	padding-right: 15px;
+	box-shadow: 0 0 5px 2px #282a2d;
+}
+
+#top {
+	background-image: url("germany-heatwave-1600x337.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 3px 2px #282a2d;
+	margin-bottom: 20px;
+	height: 200px;
+	background-position: 0;
+}
+
+h1 {
+	color: white;
+	text-shadow: black 0.1em 0.1em 0.2em
+}
+
+nav {
+	background-color: #ff5722;
+}
+
+#chart {
+	background-color: #fff;
+	height: 400px;
+	box-shadow: 0 0 5px 2px #282a2d;
+
+}
+
+#legend {
+	background-color: #fff;
+	height: 400px;
+	width: 48%;
+	box-shadow: 0 0 5px 2px #282a2d;
+}
+
+#dropdown,
+#filter {
+	height: 15px;
+
+}
+
+#dropdown {
+	width: 33%;
+}
+
+
+.select-var {
+	z-index: 10;
+	font-family: sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 2px;
+	border: transparent;
+}
+
+.my-custom-scrollbar {
+	/*	position: absolute;*/
+	overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+	display: block;
+
+}
+
+
+.tableFixHead thead th {
+	position: sticky;
+	top: 0;
+}
+
+#table {
+	background-color: #ffffff;
+	height: 345px;
+	/*	box-shadow: 0 0 5px 2px #282a2d;*/
+}
+
+
+#head,
+#table {
+	/*		margin-left: -15px;*/
+	box-shadow: 0 0 5px 2px #282a2d;
+}
+
+
+th,
+td {
+	padding: 8px 16px;
+}
+
+th {
+	background: #eee;
+	background-color: #eee;
+}
+
+#table td {
+	width: 33%;
+}
+
+#head th {
+	background-color: #eee;
+	height: 25px;
+	padding: 8px 16px;
+	width: 3%;
+
+	/*	margin-left: -15px;*/
+
+	/*    box-shadow: 0 0 5px 2px #282a2d;*/
+
+}
+
+footer {
+	height: 50px;
+	background-color: #A83405;
+}
+
+.range-slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 15px;
+	border-radius: 5px;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+	margin-top: 10px
+}
+
+.range-slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: red;
+	cursor: pointer;
+}
+
+.range-slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #4CAF50;
+	cursor: pointer;
+}
+
+#year-info {
+	background: white;
+	float: left;
+	line-height: 2;
+	padding-left: 10px;
+	text-decoration: underline;
+}
+
+
+#year {
+	background: white;
+	width: 50px;
+	position: 5px;
+	padding: 5px;
+	display: inline;
+	line-height: 2;
+	padding-bottom: 21px;
+	padding-top: 5.5px;
+	padding-right: 10px;
+	font-weight: 700
+}
+
+.highlight {
+	background-color: aqua;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../../../favicon.ico">
+	<title>Global Carbon Emissions</title>
+
+	<!--Template based on URL below-->
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+
+	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Place your stylesheets here-->
+	<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+
+	<link href="css/leaflet.css" rel="stylesheet">
+	<!--leaflet-search-plugin css-->
+	<link rel="stylesheet" href="css/leaflet-search.src.css">
+
+	<!-- leaflet zoom min plugin css -->
+	<link rel="stylesheet" href="css/L.Control.ZoomMin.css" media="screen">
+
+	<link rel="stylesheet" href="css/L.Control.ZoomMin.css">
+	<link rel="stylesheet" href="css/leaflet-search.css" />
+    
+    <!--"Tips" Tool-->
+        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script> 
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+
+		<a class="figure-img" href="https://github.com/sfairchild3/CO2-Emissions-Map"><img class="figure-img" src="images/Cloud-01.svg" alt="logo " width="30px " /></a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">S. Fairchild</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown01">
+						<a class="dropdown-item" href="https://sfairchild3.github.io/sfairchild3/">Website</a>
+						<a class="dropdown-item" href="https://sfairchild3.github.io/sfairchild3/#Portfolio">Portfolio</a>
+						<a class="dropdown-item" href="https://sfairchild3.github.io/sfairchild3/#About%20Me">About Me</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">J. Heutmaker</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown01">
+						<a class="dropdown-item" href="https://lostabroad.github.io/jasonheutmaker/#portfolio">Website</a>
+						<a class="dropdown-item" href="https://lostabroad.github.io/jasonheutmaker/#resume">Resume</a>
+						<a class="dropdown-item" href="https://lostabroad.github.io/jasonheutmaker/#about">About Me</a>
+					</div>
+				</li>
+			</ul>
+			<table cellpadding=0 cellspacing=0 border=0>
+				<tr>
+					<td style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt; ">
+						<form style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+							<input type="hidden" name="si" value="6665936">
+							<input type="hidden" name="pid" value="r">
+							<input type="hidden" name="_charset_" value="">
+							<input type="hidden" name="bcd" value="&#247;">
+							<center>
+								Search <input style="vertical-align: -20%;" type="radio" name="t" value="s" CHECKED> This site <input style="vertical-align: -20%;" type="radio" name="t" value="w"> The web<br></center>
+							<input type="text" name="query" size="15">
+							<input type="submit" value="Search">
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</nav>
+
+	<main role="main" class="container-fluid">
+
+		<div id="top" class="text-center mt-5 pt-5">
+			<h1>Global Carbon Emissions</h1>
+			<p class="lead">Global Warming has become a key issue in the world today. It is our hope that the information presented below can help individuals to better visualize the impact that each country across the globe has on CO2 emissions.</p>
+		</div>
+
+		<div id="slider"></div>
+		<div id="year-info">
+			<p>Year Selected:</p>
+		</div>
+		<div id="year"></div>
+		<hr />
+
+		<div class="row">
+			<hr />
+			<div id="map" class="col"></div>
+			<div class="col">
+				<table id="head">
+					<thead class="col table tableFixHead">
+						<tr>
+							<th scope="col">Country</th>
+							<th scope="col" id="co2">CO2</th>
+							<th scope="col" id="dropdown">
+								<p id=filter></p>
+							</th>
+
+						</tr>
+					</thead>
+				</table>
+
+				<table id="table" class="table tableFixHead table-bordered table-wrapper-scroll-y my-custom-scrollbar">
+
+				</table>
+			</div>
+		</div>
+<!--
+		<div class="row">
+			<div id="chart" class="col">
+				<center>
+
+					<div id="slider"></div>
+					<div id="year"></div>
+				</center>
+
+			</div>
+			<div id="legend" class="col"></div>
+		</div>
+-->
+
+
+	</main><!-- /.container -->
+
+
+	<footer>
+		<div>Layers icon made by <a href="https://www.flaticon.com/authors/katarina-stefanikova" title="Katarina Stefanikova">Katarina Stefanikova</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+	</footer>
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!--other scripts-->
+	<script src="lib/d3.js"></script>
+	<script src="lib/leaflet.js"></script>
+	<script src="lib/topojson.js"></script>
+	<script src="lib/leaflet-search.src.js"></script>
+	<script src="lib/geostats.js"></script>
+
+	<!-- leaflet zoom min plugin script -->
+	<script src="lib/L.Control.ZoomMin.js"></script>
+
+	<!-- leaflet d3svgOverlay script -->
+	<script src="lib/L.D3SvgOverlay.js"></script>
+
+	<script src="js/main.js"></script>
+
+
+</body></html>
